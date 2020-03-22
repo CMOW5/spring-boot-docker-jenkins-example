@@ -43,7 +43,10 @@ pipeline {
         }
 
         stage('Update Docker UAT image') {
-            echo 'update docker'
+            steps {
+                echo 'update docker'
+            }
+            
             /*
             when { branch "master" }
             steps {
@@ -59,7 +62,9 @@ pipeline {
         }
         
         stage('Update UAT container') {
-            echo 'no idea why is this needed'
+            steps {
+                echo 'no idea why is this needed'
+            }
             /*
             when { branch "master" }
             steps {
@@ -76,7 +81,10 @@ pipeline {
         }
         
         stage('Release Docker image') {
-            echo 'release docker image'
+            steps {
+                echo 'release docker image'
+            }
+            
             /*
             when { buildingTag() }
             steps {
